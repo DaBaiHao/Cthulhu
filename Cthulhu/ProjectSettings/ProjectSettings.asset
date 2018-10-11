@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: e85e3139c42f3934d9e194f16141abb2
+  productGUID: 5d6487dbd337bda40877cf6e794056ab
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: New Unity Project
+  productName: Cthulhu
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -650,8 +650,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 014ba760-e5a4-46e2-b183-74d08f0a32ce
-  projectName: New Unity Project (1)
+  cloudProjectId: 96fb4731-82a0-45fd-bdaf-7b5271ec4ceb
+  projectName: Cthulhu
   organizationId: haobai
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
