@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 20595272004522426}
   - component: {fileID: 81536717933856222}
   - component: {fileID: 114158306311402314}
+  - component: {fileID: 114618006094043126}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -158,14 +159,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461f215660fd0a045ae468f256bff9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114618006094043126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1955795423733522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eab71181004e9942a4edf64621e1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkCursor: {fileID: 2800000, guid: 423b6ac5c17e4cc4eb2fcb7532c6eaa4, type: 3}
+  unknownCursor: {fileID: 2800000, guid: f052875a4dffb9745b4b096a53149ac6, type: 3}
+  targetCursor: {fileID: 2800000, guid: ba8b5d122005366459c60db8db07297b, type: 3}
+  cursorHotSpot: {x: 96, y: 96}
 --- !u!114 &114904305133982018
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1151813358748138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8eab71181004e9942a4edf64621e1993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkCursor: {fileID: 0}
+  unknownCursor: {fileID: 0}
+  targetCursor: {fileID: 0}
+  cursorHotSpot: {x: 96, y: 96}
