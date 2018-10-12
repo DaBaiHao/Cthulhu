@@ -1,2 +1,2 @@
 # Cthulhu
-Test game
+Cthulhu is a RPG game, and implement with unity.
