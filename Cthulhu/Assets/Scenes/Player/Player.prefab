@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 11469404}
   - component: {fileID: 114981382798753590}
   m_Layer: 0
-  m_Name: ThirdPersonController
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
