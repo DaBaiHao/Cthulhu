@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
-        print(player.ToString());
+       // print(player.ToString());
     }
 	
 	// Update is called once per frame
