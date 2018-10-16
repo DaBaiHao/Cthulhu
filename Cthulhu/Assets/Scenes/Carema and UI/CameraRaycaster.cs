@@ -22,9 +22,24 @@ public class CameraRaycaster : MonoBehaviour
         get { return layerHit; }
     }
 
+
+    public delegate void OnLayerChange(); // declare new delegate type
+    public OnLayerChange layerChangeObservers; // instance an observer set
+
+    void SomeLayerChangeHandler()
+    {
+        print(" SomeLayerChangeHandler() I handle it");
+    }
+
+    
+
+
     void Start() // TODO Awake?
     {
         viewCamera = Camera.main;
+
+        layerChangeObservers += SomeLayerChangeHandler;
+        layerChangeObservers(); // call the delegate
     }
 
     void Update()
