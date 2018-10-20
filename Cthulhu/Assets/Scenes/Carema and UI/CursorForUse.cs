@@ -14,13 +14,13 @@ public class CursorForUse : MonoBehaviour {
     // Use this for initialization
     void Start () {
         cameraRaycaster = GetComponent<CameraRaycaster>();
-        cameraRaycaster.layerChangeObservers += OnLayerChanged; // registering
+        cameraRaycaster.onLayerChange += OnLayerChanged; // registering
     }
 	
 	// Update is no no no no called once per frame
-	void OnLayerChanged () { // only call when layer changes
+	void OnLayerChanged (Layer newLayer) { // only call when layer changes
          print("cursor for use Delegate reporting for duty");
-        switch (cameraRaycaster.currentLayerHit)
+        switch (newLayer)
         {
             case Layer.Walkable:
                 Cursor.SetCursor(walkCursor, cursorHotSpot, CursorMode.Auto);
@@ -40,4 +40,6 @@ public class CursorForUse : MonoBehaviour {
         }
         
 	}
+
+    // TODO consder de-registering
 }

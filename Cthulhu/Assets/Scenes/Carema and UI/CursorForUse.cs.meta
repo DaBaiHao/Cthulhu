@@ -3,7 +3,10 @@ guid: 8eab71181004e9942a4edf64621e1993
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - walkCursor: {fileID: 2800000, guid: 423b6ac5c17e4cc4eb2fcb7532c6eaa4, type: 3}
+  - unknownCursor: {fileID: 2800000, guid: f052875a4dffb9745b4b096a53149ac6, type: 3}
+  - targetCursor: {fileID: 2800000, guid: ba8b5d122005366459c60db8db07297b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
