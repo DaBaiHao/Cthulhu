@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 13615390}
   - component: {fileID: 11444856}
   - component: {fileID: 11469404}
+  - component: {fileID: 114321540004883616}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1371,13 +1372,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149790}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6753995, y: 0.5, z: -4.6709785}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.9153996, y: -4.78, z: 0.6190214}
   m_LocalScale: {x: 1, y: 0.74395424, z: 1}
   m_Children:
   - {fileID: 469942}
   - {fileID: 495908}
   - {fileID: 448028}
+  - {fileID: 4022838823521598}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2713,3 +2715,57 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149790}
   m_IsPrefabAsset: 1
+--- !u!1 &1612263587455052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4022838823521598}
+  - component: {fileID: 114914296768876556}
+  m_Layer: 9
+  m_Name: UI Socket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4022838823521598
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612263587455052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.676, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 408730}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114321540004883616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0244e3399ad7eac4c9a6d2b806a5c0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+--- !u!114 &114914296768876556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612263587455052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1946e1c1bae1c34ba2666ebb3463952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCanvasPrefab: {fileID: 1311539807392560, guid: 9a9d70d10b9331d469e57254147e0430,
+    type: 2}

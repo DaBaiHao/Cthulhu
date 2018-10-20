@@ -343,7 +343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
@@ -363,7 +363,7 @@ Prefab:
     - target: {fileID: 224105136012598370, guid: 75a43cca039264395b99698681e52275,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224105136012598370, guid: 75a43cca039264395b99698681e52275,
         type: 2}
@@ -403,7 +403,7 @@ Prefab:
     - target: {fileID: 224105136012598370, guid: 75a43cca039264395b99698681e52275,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224105136012598370, guid: 75a43cca039264395b99698681e52275,
         type: 2}
@@ -533,7 +533,7 @@ Transform:
   - {fileID: 670606175}
   - {fileID: 22581684}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &827007269
 Prefab:
@@ -638,7 +638,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4758319101921476, guid: b5cd4b1ab33f1ac4c8915cfc587a67da, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5cd4b1ab33f1ac4c8915cfc587a67da, type: 2}
@@ -787,7 +787,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: b8c9415940d2215478bf08e74a2a1c26, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.28
+      value: -4.78
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: b8c9415940d2215478bf08e74a2a1c26, type: 2}
       propertyPath: m_LocalPosition.z
@@ -847,7 +847,7 @@ Transform:
   - {fileID: 1789780999}
   - {fileID: 929004351}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1707293974 stripped
 Transform:
