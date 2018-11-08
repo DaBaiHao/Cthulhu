@@ -24,3 +24,19 @@ Main character prototype based on Francis Wayland Thurston who is the a characte
   -  making WindMill rotating
   - ![WindMill](store/WindMill.png)
  -
+
+
+
+## Coding Information
+#### About WindMill rotating
+## ![WindMill](store/WindMill.png)
+Based on the
+```
+float xDegreesPerFrame = Time.deltaTime / 60 * 360 * xRotationsPerMinute;
+transform.RotateAround(transform.position, transform.right, xDegreesPerFrame);
+float yDegreesPerFrame = Time.deltaTime / 60 * 360 * yRotationsPerMinute;
+transform.RotateAround(transform.position, transform.up, yDegreesPerFrame);
+float zDegreesPerFrame = Time.deltaTime / 60 * 360 * zRotationsPerMinute;
+transform.RotateAround(transform.position, transform.forward, zDegreesPerFrame);
+
+```
