@@ -28,9 +28,10 @@ Main character prototype based on Francis Wayland Thurston who is the a characte
 
 
 ## Coding Information
-#### About WindMill rotating
+#### 1. About WindMill rotating
 ## ![WindMill](store/WindMill.png)
-Based on the
+Based on the code below in file [SpinMe.cs](https://github.com/DaBaiHao/Cthulhu/blob/master/Cthulhu/Assets/Utility/SpinMe.cs) :
+
 ``` C
 float xDegreesPerFrame = Time.deltaTime / 60 * 360 * xRotationsPerMinute;
 transform.RotateAround(transform.position, transform.right, xDegreesPerFrame);
