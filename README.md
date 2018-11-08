@@ -15,3 +15,12 @@ Main character prototype based on Francis Wayland Thurston who is the a characte
 ## Character Setting
 ### ![Main Character 1](store/Pj01.jpg)
 ### ![Main Character 2](store/Pj02.jpg)
+
+
+## Current stage
+ - Player movement Complete
+ - User interface Complete
+ - Environment
+  -  making WindMill rotating
+   ![WindMill](store/WindMill.png)
+ -
