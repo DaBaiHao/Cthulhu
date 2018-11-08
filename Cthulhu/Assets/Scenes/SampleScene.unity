@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 1e2fd196afcb1b04a9a7cb0a0cdb80ee, type: 2}
 --- !u!4 &22581684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 408730, guid: b8c9415940d2215478bf08e74a2a1c26,
@@ -573,6 +573,10 @@ Prefab:
     - target: {fileID: 4264773008747758, guid: 151ae6170f27da944ab6253b9962bdb9, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067322896442026, guid: 151ae6170f27da944ab6253b9962bdb9, type: 2}
+      propertyPath: m_Name
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 151ae6170f27da944ab6253b9962bdb9, type: 2}
