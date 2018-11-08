@@ -22,5 +22,5 @@ Main character prototype based on Francis Wayland Thurston who is the a characte
  - User interface Complete
  - Environment
   -  making WindMill rotating
-   ![WindMill](store/WindMill.png)
+  - ![WindMill](store/WindMill.png)
  -
