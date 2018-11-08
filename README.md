@@ -5,12 +5,8 @@ Cthulhu is a RPG game, and implement with unity.
 Game type: RPG, 3D
 Platform: Unity3D
 
-## Background 
+## Background
 The Background story of this game is based on the [The Call of Cthulhu](https://en.wikipedia.org/wiki/The_Call_of_Cthulhu), which is a short story by American writer [H. P. Lovecraft](https://en.wikipedia.org/wiki/H._P._Lovecraft).
-### ![H. P. Lovecraft](https://upload.wikimedia.org/wikipedia/commons/1/10/H._P._Lovecraft%2C_June_1934.jpg)
+### ![H. P. Lovecraft](store\H._P._Lovecraft,_June_1934.jpg)
 
-Main character prototype based on Francis Wayland Thurston who is the a character in [The Call of Cthulhu](https://en.wikipedia.org/wiki/The_Call_of_Cthulhu). 
-
-
-
-
+Main character prototype based on Francis Wayland Thurston who is the a character in [The Call of Cthulhu](https://en.wikipedia.org/wiki/The_Call_of_Cthulhu).
