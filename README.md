@@ -47,6 +47,23 @@ transform.RotateAround(transform.position, transform.forward, zDegreesPerFrame);
 ---
 #### 2. About Enemy [Path finding](https://en.wikipedia.org/wiki/Pathfinding)
 ## ![Pathfinding](store/pathfinding.png)
-Using [Nevigation and PathFinding( AI tool )](https://docs.unity3d.com/Manual/Navigation.html) in Unity
+1. Using [Nevigation and PathFinding( AI tool )](https://docs.unity3d.com/Manual/Navigation.html) in Unity to find walkable ground in the environment item.
 ## ![Enemy](store/enemy.png)
 ## ![pathingFinding](store/pathingFinding.png)
+
+2. Add [nav mesh agent](https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html) and [AI character control](https://answers.unity.com/questions/139191/make-ai-move-using-charactercontrollermove-instead.html) functions
+3. using the [nav mesh agent](https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html) and [AI character control](https://answers.unity.com/questions/139191/make-ai-move-using-charactercontrollermove-instead.html) functions in  [Enemy.cs](https://github.com/DaBaiHao/Cthulhu/blob/master/Cthulhu/Assets/Scenes/Enemy/Enemy.cs):
+
+``` C
+if(distanceToPlayer <= attackRadius)
+      {
+           aiCharacterControl.SetTarget(player.transform);
+       }
+       else
+       {
+           aiCharacterControl.SetTarget(transform);
+       }
+
+```
+The enemy will stop when player character run away.
+## ![ai](store/ai.png)
