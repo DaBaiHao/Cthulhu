@@ -83,3 +83,29 @@ The enemy will stop when player character run away.
 
 ---
 #### 3. Fully Event Based [Raycasting](https://en.wikipedia.org/wiki/Ray_casting)
+#### 4. Player [Path finding](https://en.wikipedia.org/wiki/Pathfinding)
+1. Using [Nevigation and PathFinding( AI tool )](https://docs.unity3d.com/Manual/Navigation.html) in Unity to find walkable ground in the environment item.
+2. using the [nav mesh agent](https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html) and [AI character control](https://answers.unity.com/questions/139191/make-ai-move-using-charactercontrollermove-instead.html) functions in  [PlayerMovement.cs](https://github.com/DaBaiHao/Cthulhu/blob/master/Cthulhu/Assets/Scenes/Player/PlayerMovement.cs):
+
+``` C
+switch (layerHit)
+        {
+            case enemyLayerNumber:
+                // navigate to the enemy
+                GameObject enemy = raycastHit.collider.gameObject;
+                aiCharacterControl.SetTarget(enemy.transform);
+                break;
+            case walkableLayerNumber:
+                // navigate to point on the ground
+                walkTarget.transform.position = raycastHit.point;
+                aiCharacterControl.SetTarget(walkTarget.transform);
+                break;
+            default:
+                Debug.LogWarning("Don't know how to handle mouse click for player movement");
+                return;
+        }
+
+```
+
+3. The player will find the enemy after click the target one:  
+## ![Enemy](store/player Pathfinding.png)

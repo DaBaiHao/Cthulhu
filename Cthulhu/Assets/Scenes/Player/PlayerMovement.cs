@@ -1,26 +1,41 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.AI;
 
+
+
+
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(AICharacterControl))]
 [RequireComponent(typeof (ThirdPersonCharacter))]
 public class PlayerMovement : MonoBehaviour
 {
     bool isInDirectMode = false;
 
 
-    [SerializeField] float walkMoveStopRadius = 0.2f;
-    [SerializeField] float attackMoveStopRadius = 5f;
+    ThirdPersonCharacter thirdPersonCharacter = null;   // A reference to the ThirdPersonCharacter on the object
+    CameraRaycaster cameraRaycaster = null;
 
-    ThirdPersonCharacter thirdPersonCharacter;   // A reference to the ThirdPersonCharacter on the object
-    CameraRaycaster cameraRaycaster;
     Vector3 currentDestination, clickPoint;
-        
-    private void Start()
+
+    AICharacterControl aiCharacterControl = null;
+    GameObject walkTarget = null;
+    // TODO solve fight between serialize and const
+    [SerializeField] const int walkableLayerNumber = 8;
+    [SerializeField] const int enemyLayerNumber = 9;
+
+     void Start()
     {
         cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
         thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
         currentDestination = transform.position;
+
+        aiCharacterControl = GetComponent<AICharacterControl>();
+        walkTarget = new GameObject("walkTarget");
+        cameraRaycaster.notifyMouseClickObservers += ProcessMouseClick;
     }
+
 
     //TODO fix the problem with the increase speed WASD and click
 
@@ -45,60 +60,38 @@ public class PlayerMovement : MonoBehaviour
     //    }
 
 
-        
+
 
     //}
 
-
-
-    private void ProcessDirectMovement()
+    void ProcessMouseClick(RaycastHit raycastHit, int layerHit)
     {
-        // print("direction movement");
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        print(h+v);
-        // calculate camera relative direction to move:
+        switch (layerHit)
+        {
+            case enemyLayerNumber:
+                // navigate to the enemy
+                GameObject enemy = raycastHit.collider.gameObject;
+                aiCharacterControl.SetTarget(enemy.transform);
+                break;
+            case walkableLayerNumber:
+                // navigate to point on the ground
+                walkTarget.transform.position = raycastHit.point;
+                aiCharacterControl.SetTarget(walkTarget.transform);
+                break;
+            default:
+                Debug.LogWarning("Don't know how to handle mouse click for player movement");
+                return;
+        }
 
-        Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
-        Vector3 movement = v * cameraForward + h * Camera.main.transform.right;
-
-        thirdPersonCharacter.Move(movement, false, false);
     }
 
 
 
 
 
-    //private void ProcessMouseMovement()
-    //{
-    //    if (Input.GetMouseButton(0))
-    //    {
-
-    //        clickPoint = cameraRaycaster.hit.point;
-    //        // print("Cursor raycast hit layer :" + cameraRaycaster.layerHit);
-    //        switch (cameraRaycaster.currentLayerHit)
-    //        {
-    //            case Layer.Walkable:
-    //                // currentClickTarget = cameraRaycaster.hit.point;  // So not set in default case
-    //                currentDestination = ShortDestination(clickPoint, walkMoveStopRadius);
-    //                break;
-    //            case Layer.Enemy:
-    //                print("not moving to enemy");
-    //                currentDestination = ShortDestination(clickPoint, attackMoveStopRadius);
-    //                break;
-    //            default:
-    //                print("unexpect layer found");
-    //                return;
-    //        }
 
 
-
-    //    }
-
-    //    WalkToDestination();
-    //}
-
-    private void WalkToDestination()
+        private void WalkToDestination()
     {
         var playerToClickPoint = currentDestination - transform.position;
 
@@ -112,24 +105,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    Vector3 ShortDestination(Vector3 destination, float shortening)
-    {
-        Vector3 reductionVector = (destination - transform.position).normalized * shortening;
-        return destination - reductionVector;
-    }
+    
 
-    void OnDrawGizmos()
+    void ProcessDirectMovement()
     {
         // draw movment Gizmos
-        Gizmos.color = Color.black;
-        Gizmos.DrawLine(transform.position, clickPoint);
-        Gizmos.DrawSphere(currentDestination, 0.15f);
-        Gizmos.DrawSphere(clickPoint, 0.1f);
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        // calculate camera relative direction to move:
+        Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 movement = v * cameraForward + h * Camera.main.transform.right;
 
 
-        // draw attack Gizmos
-        Gizmos.color = new Color(255f, 0f, 0, .5f);
-        Gizmos.DrawWireSphere(transform.position, attackMoveStopRadius);
+        thirdPersonCharacter.Move(movement, false, false);
     }
 }
 
