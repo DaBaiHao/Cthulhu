@@ -25,29 +25,29 @@ public class PlayerMovement : MonoBehaviour
     //TODO fix the problem with the increase speed WASD and click
 
 
-    // Fixed update is called in sync with physics
-    private void FixedUpdate()
-    {
+    //// Fixed update is called in sync with physics
+    //private void FixedUpdate()
+    //{
 
-        if (Input.GetKeyDown(KeyCode.G)) { // TODO allow player to map
-            isInDirectMode = !isInDirectMode; // toggle mode
-            currentDestination = transform.position; // clear the click target
-        }
+    //    if (Input.GetKeyDown(KeyCode.G)) { // TODO allow player to map
+    //        isInDirectMode = !isInDirectMode; // toggle mode
+    //        currentDestination = transform.position; // clear the click target
+    //    }
 
 
-        if (isInDirectMode)
-        {
-             ProcessDirectMovement();
-        }
-        else
-        {
-            ProcessMouseMovement(); // mouse movement
-        }
+    //    if (isInDirectMode)
+    //    {
+    //         ProcessDirectMovement();
+    //    }
+    //    else
+    //    {
+    //        ProcessMouseMovement(); // mouse movement
+    //    }
 
 
         
 
-    }
+    //}
 
 
 
@@ -69,34 +69,34 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    private void ProcessMouseMovement()
-    {
-        if (Input.GetMouseButton(0))
-        {
+    //private void ProcessMouseMovement()
+    //{
+    //    if (Input.GetMouseButton(0))
+    //    {
 
-            clickPoint = cameraRaycaster.hit.point;
-            // print("Cursor raycast hit layer :" + cameraRaycaster.layerHit);
-            switch (cameraRaycaster.currentLayerHit)
-            {
-                case Layer.Walkable:
-                    // currentClickTarget = cameraRaycaster.hit.point;  // So not set in default case
-                    currentDestination = ShortDestination(clickPoint, walkMoveStopRadius);
-                    break;
-                case Layer.Enemy:
-                    print("not moving to enemy");
-                    currentDestination = ShortDestination(clickPoint, attackMoveStopRadius);
-                    break;
-                default:
-                    print("unexpect layer found");
-                    return;
-            }
+    //        clickPoint = cameraRaycaster.hit.point;
+    //        // print("Cursor raycast hit layer :" + cameraRaycaster.layerHit);
+    //        switch (cameraRaycaster.currentLayerHit)
+    //        {
+    //            case Layer.Walkable:
+    //                // currentClickTarget = cameraRaycaster.hit.point;  // So not set in default case
+    //                currentDestination = ShortDestination(clickPoint, walkMoveStopRadius);
+    //                break;
+    //            case Layer.Enemy:
+    //                print("not moving to enemy");
+    //                currentDestination = ShortDestination(clickPoint, attackMoveStopRadius);
+    //                break;
+    //            default:
+    //                print("unexpect layer found");
+    //                return;
+    //        }
 
 
 
-        }
+    //    }
 
-        WalkToDestination();
-    }
+    //    WalkToDestination();
+    //}
 
     private void WalkToDestination()
     {

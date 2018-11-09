@@ -35,8 +35,10 @@ Main character prototype based on Francis Wayland Thurston who is the a characte
  - Environment
   -  making WindMill rotating Complete
   - ![WindMill](store/WindMill.png)
- - Enemy [Path Finding](https://en.wikipedia.org/wiki/Pathfinding)
+ - Enemy [Path Finding](https://en.wikipedia.org/wiki/Pathfinding) Complete
  - ![Pathfinding](store/pathfinding.png)
+ - Fully Event Based [Raycasting](https://en.wikipedia.org/wiki/Ray_casting)
+
 
 ---
 ---
@@ -80,3 +82,4 @@ The enemy will stop when player character run away.
 ## ![ai](store/ai.png)
 
 ---
+#### 3. Fully Event Based [Raycasting](https://en.wikipedia.org/wiki/Ray_casting)
