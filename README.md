@@ -108,4 +108,4 @@ switch (layerHit)
 ```
 
 3. The player will find the enemy after click the target one:  
-## ![Enemy](store/player Pathfinding.png)
+## ![playerPathfinding](store/playerPathfinding.png)
